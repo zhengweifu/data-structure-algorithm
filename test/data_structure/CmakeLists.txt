@@ -1,0 +1,17 @@
+
+set(INC
+../..
+)
+
+set(SRC
+    main.cpp
+)
+
+include_directories(${INC})
+
+
+set(OUT_MOUDLE_NAME data-structure-test)
+
+add_executable(${OUT_MOUDLE_NAME} ${SRC})
+
+# target_link_libraries(${OUT_MOUDLE_NAME} dsa)

@@ -1,0 +1,23 @@
+
+set(INC
+../..
+)
+
+set(SRC
+    main.cpp
+)
+
+set(SRC_HEADERS
+    ../../util/common.h
+    ../../algorithm/sort/counting_sort.h
+
+)
+
+include_directories(${INC})
+
+
+set(OUT_MOUDLE_NAME algorithm-test)
+
+add_executable(${OUT_MOUDLE_NAME} ${SRC} ${SRC_HEADERS})
+
+# target_link_libraries(${OUT_MOUDLE_NAME} dsa)
