@@ -2,9 +2,13 @@
 #define __UTIL_COMMON_H__
 
 #include <iostream>
-namespace dsa { namespace util
-{
 
+using namespace std;
+
+namespace dsa
+{
+namespace util
+{
 template <typename T>
 void printArray(T *data, size_t len)
 {
@@ -25,7 +29,14 @@ void printArray(T *data, size_t len)
 	}
 }
 
-}}
-
+template <typename T>
+void swap(T *data, size_t i, size_t j)
+{
+	T temp = data[i];
+	data[i] = data[j];
+	data[j] = temp;
+}
+} // namespace util
+} // namespace dsa
 
 #endif // __UTIL_COMMON_H__

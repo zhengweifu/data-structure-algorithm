@@ -10,7 +10,7 @@ set(SRC
 set(SRC_HEADERS
     ../../util/common.h
     ../../algorithm/sort/counting_sort.h
-
+    ../../algorithm/sort/heap_sort.h
 )
 
 include_directories(${INC})

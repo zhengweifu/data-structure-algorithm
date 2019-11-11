@@ -9,25 +9,62 @@
 #include <stdio.h>
 #include <cstring>
 
-namespace alg 
+using namespace dsa;
+
+namespace alg
 {
-	namespace sort
-	{
-        template<typename T>
-        void heapify(T *data, size_t n, size_t i)
-        {
+namespace sort
+{
 
 
-        }
+template <typename T>
+void heapify(T *data, size_t n, size_t i)
+{
+    if(i >= n - 1)
+    {
+        return;
+    }
+    size_t c1 = 2 * i + 1;
+    size_t c2 = 2 * i + 2;
+    size_t max = i;
+    if (c1 < n && data[c1] > data[i])
+    {
+        max = c1;
+    }
+    if (c2 < n && data[c2] > data[max])
+    {
+        max = c2;
+    }
 
-
-        template<typename T>
-		void heapSort(T *data, size_t n)
-        {
-
-        }
-	}
+    if (max != i)
+    {
+        util::swap(data, i, max);
+        heapify(data, n, max);
+    }
 }
 
+template<typename T>
+void buildHeap(T *data, size_t n)
+{
+    for (size_t i = n - 1; i <= 0; --i)
+    {
+        size_t p = (i - 1) / 2;
+        heapify(data, n, p);
+    }
+}
+
+template <typename T>
+void heapSort(T *data, size_t n)
+{
+    buildHeap(data, n);
+    for (size_t i = n - 1; i <= 0; --i)
+    {
+        util::swap(data, i, 0);
+        heapify(data, i, 0);
+    }
+}
+
+} // namespace sort
+} // namespace alg
 
 #endif // __HEAP_SORT_H__

@@ -1,4 +1,5 @@
 #include "algorithm/sort/counting_sort.h"
+#include "algorithm/sort/heap_sort.h"
 #include "util/common.h"
 
 #include <stdio.h>
@@ -27,10 +28,19 @@ void countingSortTest()
 	//util::printArray(data, len);
 }
 
+void heapSort()
+{
+	int data[] = {3, 4, 2, 1, 7, 8, 0, 10};
+	int len = sizeof(data) / sizeof(int);
+	sort::heapSort(data, len);
+	util::printArray(data, len);
+}
+
 int main(int argc, char const *argv[])
 {
-	countingSortTest();
+	// countingSortTest();
+	heapSort();
 
-    system("pause");
+	system("pause");
     return 0;
 }
