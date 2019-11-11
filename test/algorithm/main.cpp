@@ -6,7 +6,7 @@
 #include <time.h>
 #include <iostream>
 
-using namespace dsa;
+using namespace alg;
 using namespace std;
 
 void countingSortTest() 
@@ -22,7 +22,7 @@ void countingSortTest()
 	
 	//util::printArray(data, len);
 
-    countingSort(data, len, max, min);
+    sort::countingSort(data, len, max, min);
 
 	//util::printArray(data, len);
 }
