@@ -16,11 +16,10 @@ namespace alg
 namespace sort
 {
 
-
 template <typename T>
 void heapify(T *data, size_t n, size_t i)
 {
-    if(i >= n - 1)
+    if (i >= n - 1)
     {
         return;
     }
@@ -43,13 +42,12 @@ void heapify(T *data, size_t n, size_t i)
     }
 }
 
-template<typename T>
+template <typename T>
 void buildHeap(T *data, size_t n)
 {
-    for (size_t i = n - 1; i <= 0; --i)
+    for (int i = (n - 1) / 2; i >= 0; --i)
     {
-        size_t p = (i - 1) / 2;
-        heapify(data, n, p);
+        heapify(data, n, i);
     }
 }
 
@@ -57,7 +55,7 @@ template <typename T>
 void heapSort(T *data, size_t n)
 {
     buildHeap(data, n);
-    for (size_t i = n - 1; i <= 0; --i)
+    for (size_t i = n - 1; i > 0; --i)
     {
         util::swap(data, i, 0);
         heapify(data, i, 0);

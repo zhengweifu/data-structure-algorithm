@@ -3,7 +3,9 @@
 
 #include <iostream>
 
-namespace dsa
+namespace ds
+{
+namespace tree
 {
 
 template <class T>
@@ -157,6 +159,7 @@ void BinaryTree<T>::postOrder(BinaryTreeNode<T> *node, int level)
     }
 }
 
-} // namespace dsa
+} // namespace tree
+} // namespace ds
 
 #endif //__BINARY_TREE_H__

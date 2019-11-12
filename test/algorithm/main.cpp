@@ -30,7 +30,7 @@ void countingSortTest()
 
 void heapSort()
 {
-	int data[] = {3, 4, 2, 1, 7, 8, 0, 10};
+	int data[] = {3, 4, 2, 1, 7, 8, 0, 1, 4, 3, 10, 0.1};
 	int len = sizeof(data) / sizeof(int);
 	sort::heapSort(data, len);
 	util::printArray(data, len);

@@ -19,16 +19,18 @@
 
 #ifndef __RED_BRACK_TREE_H__
 #define __RED_BRACK_TREE_H__
-namespace dsa
+namespace ds
+{
+namespace tree
 {
 
-enum RBTNColor 
+enum RBTNColor
 {
     Brack,
     Red
 }
 
-template<class T>
+template <class T>
 class RBTNode
 {
 public:
@@ -37,7 +39,7 @@ public:
 
     RBTNode *left, *right, parent;
 
-    RBTNode(T data) 
+    RBTNode(T data)
     {
         this->data = data;
         left = NULL;
@@ -46,14 +48,13 @@ public:
     }
 };
 
-template<class T>
+template <class T>
 class RedBrackTree
 {
     void insert();
-
 };
-    
-} // namespace name
 
+} // namespace tree
+} // namespace ds
 
 #endif // __RED_BRACK_TREE_H__
